@@ -6,12 +6,12 @@ class App < Sinatra::Base
     end
 
     post '/puppy' do
-# name
-# breed
-# age
-      @analyzed_text = TextAnalyzer.new(params[:user_text])
+      @name = params[:name]
+      @breed = params[:breed]
+      @age = params[:age]
+      # @analyzed_text = TextAnalyzer.new(params[:user_text])
 
-      erb :results
+      erb :display_puppy
     end
     get '/new' do
       erb :create_puppy.erb
