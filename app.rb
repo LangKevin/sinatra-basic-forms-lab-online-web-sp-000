@@ -6,6 +6,9 @@ class App < Sinatra::Base
     end
 
     post '/puppy' do
+# name
+# breed
+# age
       @analyzed_text = TextAnalyzer.new(params[:user_text])
 
       erb :results
